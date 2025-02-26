@@ -1,0 +1,65 @@
+*{
+    margin: 0%;
+    padding: 0%;
+    box-sizing: border-box;
+    font-family: "Roboto", sans-serif;
+    font-weight: 500;
+    font-style: normal;
+}
+
+/*Estilos para el encabezado*/
+header{
+    width: 98.5vw;
+    height: 9vh;
+    background-color: darkblue;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content:space-around;
+    align-items: center;
+    position: relative;
+    left: 0.7vw;
+}
+header>h1{
+    color: aliceblue;
+    font-size: 1.3rem;
+}
+
+/*Estilos para el cuerpo principal*/
+div{
+    width: 100vw;
+    height: 91vh;
+    /*background-color: brown;*/
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    align-items: center;
+}
+div>form{ /*Estilos para el formulario*/
+  display: flex;
+  flex-flow: column wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+}
+div>form>a{
+    text-decoration:none;
+    user-select: none;
+}
+div>form>a>button{
+    font-size: 1.5rem;
+    color:black;
+    background-color: rgb(28, 180, 250);
+    width: 40vw;
+    height: 10vh;
+    border-radius:1.3rem;
+    border: none;
+    cursor: pointer;
+    user-select: none;
+}
+button:active{
+    transform: scale(0.9);
+}
+
+
+
+

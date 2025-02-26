@@ -1,0 +1,172 @@
+
+1. Rol: Administrador
+
+El Administrador tiene los permisos más amplios en el sistema. Puede gestionar usuarios, clientes, productos y proveedores, así como configurar y supervisar todo el sistema.
+
+Permisos y Funciones del Administrador:
+
+Gestión de usuarios:
+
+Agregar nuevos usuarios (administradores, gerentes de tienda, vendedores).
+
+Editar información de usuarios existentes.
+
+Eliminar usuarios del sistema.
+
+Asignar y modificar roles y permisos a los usuarios.
+
+
+Gestión de clientes:
+
+Agregar nuevos clientes al sistema.
+
+Editar información de clientes (nombre, contacto, dirección).
+
+Eliminar registros de clientes.
+
+
+Gestión de productos:
+
+Agregar nuevos productos al inventario.
+
+Editar detalles de productos (nombre, precio, cantidad, descripción).
+
+Eliminar productos del inventario.
+
+
+Gestión de proveedores:
+
+Agregar nuevos proveedores.
+
+Editar información de proveedores (nombre, contacto, dirección).
+
+Eliminar proveedores del sistema.
+
+
+Gestión de inventario:
+
+Ajustar cantidades de stock manualmente.
+
+Consultar y revisar el inventario completo.
+
+
+Generación de reportes:
+
+Generar reportes de ventas diarias, mensuales o personalizadas.
+
+Consultar reportes de inventario y movimientos de stock.
+
+Revisar el historial de transacciones y actividades de los usuarios.
+
+
+Supervisión de transacciones:
+
+Consultar todas las ventas realizadas.
+
+Revisar devoluciones y cambios de productos.
+
+Supervisar las actividades y transacciones realizadas por el Gerente de tienda y Vendedores. (Osea que le salga quien fue el q vendió o agrego o borro algo)
+
+
+Configuración del sistema:
+
+Ajustar configuraciones generales (promociones, descuentos, impuestos).
+
+Acceder a los logs de auditoría para ver el historial de actividades del sistema.
+
+
+
+2. Rol: Gerente de tienda
+
+El Gerente de tienda tiene un enfoque operativo, supervisando el inventario y las ventas, pero con menos acceso que el Administrador.
+
+Permisos y Funciones del Gerente de tienda:
+
+Gestión de inventario:
+
+Agregar nuevos productos al inventario.
+
+Editar detalles de productos (precio, cantidad).
+
+Ajustar cantidades de stock (sin eliminar productos).
+
+Consultar disponibilidad de productos.
+
+
+Supervisión de ventas:
+
+Revisar y monitorear las ventas realizadas por los vendedores.
+
+Generar reportes de ventas diarios o semanales para análisis.
+
+Consultar reportes de rendimiento de ventas.
+
+
+Gestión de caja:
+
+Abrir y cerrar caja al inicio y final del turno.
+
+Revisar el balance de ingresos y egresos al final del día.
+
+
+Atención al cliente:
+
+Autorizar descuentos especiales o promociones (si está permitido).
+
+Manejar devoluciones y cambios de productos.
+
+
+Consulta de proveedores y clientes:
+
+Consultar la lista de proveedores y sus productos.
+
+Acceder a la lista de clientes para ver historial de compras.
+
+
+
+3. Rol: Venta (Vendedor)
+
+El Vendedor se enfoca en las transacciones y la atención directa al cliente en el punto de venta, con permisos limitados para garantizar la seguridad y precisión del sistema.
+
+Permisos y Funciones del Vendedor:
+
+Procesar ventas:
+
+Registrar ventas en el sistema (escaneo o ingreso manual de productos).
+
+Aplicar descuentos autorizados previamente.
+
+Generar facturas o comprobantes de compra para el cliente.
+
+
+Gestión de caja:
+
+Abrir caja al inicio de su turno.
+
+Registrar ingresos y egresos durante las transacciones.
+
+Hacer cierres parciales de caja si es necesario (informes de turno).
+
+
+Consulta de inventario:
+
+Verificar la disponibilidad de productos en stock (solo lectura).
+
+Consultar precios y descripciones de productos para los clientes.
+
+
+Atención al cliente:
+
+Realizar devoluciones o cambios de productos según las políticas establecidas.
+
+Asistir al cliente con consultas sobre productos, precios y promociones.
+
+
+Recolección de datos del cliente:
+
+Agregar datos básicos de clientes nuevos durante una transacción (nombre, número de contacto).
+______________________________
+
+El vendedor solo puede agregar datos básicos de clientes durante una transacción, pero no editar ni eliminar registros completos.
+
+De esta manera, el sistema mantiene una estructura clara y controlada, con permisos adecuados según las responsabilidades de cada rol.

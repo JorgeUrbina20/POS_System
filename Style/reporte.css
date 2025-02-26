@@ -1,0 +1,32 @@
+*{
+    padding: 0%;
+    margin: 0%;
+    box-sizing: border-box;
+}
+/*Estilos de la barra de navegación*/
+nav{
+    background:skyblue;
+    color:white;
+    display: flex;
+    flex-flow: row wrap;
+    height: 10vh;
+    align-items: center;
+    align-content: space-around;
+}
+nav>.ancla{
+    text-decoration:none
+}
+nav>.ancla>h3{
+    color:white;
+    font-size: 2rem;
+}
+i{
+    color: white;
+    font-size: 2rem;
+}
+
+.reporte{
+    cursor: pointer;
+    max-height: 90vh;
+    overflow:auto;
+}

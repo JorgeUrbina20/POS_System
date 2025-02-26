@@ -1,0 +1,97 @@
+Mira el nombre del servidor es MAQUINA-12 para que lo vallas guardando y lo que tengo es esta tabla
+create table usuario(
+    id int identity(1000,1) primary key,
+    username varchar(25) not null,
+    contra nvarchar(80) not null,
+	rol nvarchar(50) not null,
+	telUsuario char (8) check (telUsuario like '[2|5|7|8][0-9][0-9][0-9][0-9][0-9][0-9][0-9]'),
+	email nvarchar(100),
+	direccion nvarchar(250) not null,
+	fecha_creacion datetime default getdate(),
+    estado bit default 1 NOT NULL
+);
+--SP: para el usuario
+
+-->Insercion
+create or alter proc sp_insertU
+    @username varchar(25),
+    @contra nvarchar(80),
+	@rol nvarchar(50),
+	@telUsuario char(8),
+	@email nvarchar(100),
+	@direccion nvarchar(250)
+as
+begin
+	declare @pdt as char(1)=(substring(@telUsuario,1,1));
+	begin try
+	begin transaction
+		if(@username='' or @contra='' or @rol='')
+			print 'Los campos no pueden ser nulos o vacios';
+			else
+				if(@pdt='2' or @pdt='5' or @pdt='7' or @pdt='8')
+				begin
+					insert into usuario values  (@username,@contra,@rol,@telUsuario,@email,@direccion,default,default);
+				end
+				else
+					print 'El numero de telefono debe empezar con 2,5,7 u 8';
+				commit transaction; --Si todo los datos que el usuario a ingresado estan correctos entonces se modifica la BDD
+	end try
+	begin catch
+		rollback transaction --Revertir todos los cambios realizados en la BDD
+		print ('Ups ha ocurrido un error: '+error_message());
+	end catch
+end
+
+Podemos intentar con este primero hacer la conexion y la llamada al procedimiento ya que la interfaz en html es esta
+
+<div class="col-12" id="p1"><!--Módulo para crear-->
+                        <div class="row mb-2">
+                            <div class="col-12 d-flex flex-row justify-content-center align-items-center p-2">
+                                <img src="../Images/IconoPOS.webp" alt="Logo del sistema POS" style="height: 31vh; width: 20vw;">
+                            </div>
+                            <div class="col-12">
+                                <h2 class="text-center p-2 textoPrincipalCapas">Nuevo proveedor</h2>
+                                <form id="formulario3" method="post" action="#" enctype="multipart/form-data" target="self" class="row"><!--Este formulario es la fila que contiene a los elementos inputs en donde se recibe la informacion por parte del usuario-->
+                                    <div class="col-6">
+                                        <div class="form-floating mb-3">
+                                            <input maxlength="30" type="text" class="form-control" id="floatingInput" placeholder="Nombre Usuario">
+                                            <label for="floatingInput">Name</label>
+                                        </div>
+                                        <div class="form-floating mt-3">
+                                            <input maxlength="70" type="text" class="form-control" id="floatingEmail" placeholder="Email">
+                                            <label for="floatingEmail">Ruc</label>
+                                        </div>
+                                        <div class="form-floating mt-3">
+                                            <input min="99999999" max="999999999999999" type="number" class="form-control" id="floatingTel" placeholder="N Tel">
+                                            <label for="floatingTel">Telephone</label>
+                                        </div>
+                                        <div class="form-floating mt-3"><!--Verificar si colocar el tipo de proveedor que puede ser(categoria)-->
+                                            <select class="form-select" aria-label="Default select example">
+                                                <option selected>Productos o servicios ofrecidos</option>
+                                                <option value="Venta">Venta</option>
+                                                <option value="Administrador">Administrador</option>
+                                                <option value="Gerente de tienda">Gerente de tienda</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                    <div class="col-6">
+                                        <div class="form-floating">
+                                            <input type="text" class="form-control" id="floatingDireccion" placeholder="Dirección">
+                                            <label for="floatingDireccion">Address</label>
+                                        </div>
+                                        <div class="form-floating mt-3">
+                                            <input min="0" max="9999" type="number" class="form-control" id="floatingId" placeholder="Identificación">
+                                            <label for="floatingId">Id</label>
+                                        </div>
+                                        <div class="form-floating mt-3">
+                                            <input maxlength="70" type="text" class="form-control" id="floatingEmail" placeholder="Email">
+                                            <label for="floatingEmail">Email</label>
+                                        </div>
+                                        <div class="d-grid gap-2 mt-3" style="height: 7.2vh;">
+                                            <button class="btn btn-primary fs-3" type="submit">Crear</button>
+                                        </div>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                    </div>

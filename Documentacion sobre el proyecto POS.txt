@@ -1,0 +1,20 @@
+//Sección de tomar orden
+
+Descripción:
+Item: Son secciones dentro del HTML
+El la toma de orden segundo container habrá in <form>
+el formulario aceptara múltiples valores de entradas
+
+Evento: Cada vez que el usuario de click sobre una sección 
+	especifica el elemento se agregara automáticamente
+	en el detalle de la compra, todo esto tiene que se
+	manejado en JS para mayor control de la lógica del 
+	programa.
+
+Cancelar: Esto se activará mediante un evento de click que de el
+	usuario se eliminará la orden que se acaba de tomar pero
+	no toda sino la ultima en ingresar sea la primera en salir.
+	concepto de Pila(Stack).
+pagar:	El botón de pagar no se activara mediante un evento en especifico
+	ya que el formulario me ayuda a una vez que mande el formulario
+	que me redireccione a la pagina de "Pagar Orden"(Método de pago).

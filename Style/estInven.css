@@ -1,0 +1,72 @@
+::selection{
+    background-color: darkblue;
+    color: tomato;
+}
+.nav{
+    background-color: skyblue;
+}
+
+i{
+    font-size:1.6rem;
+    color: aliceblue;
+}
+#fondo:hover{
+    transform: rotate(55deg);
+}
+.color{
+    padding: 25px;
+}
+/*Primera columna*/
+.imgColor{
+    cursor:pointer;
+    filter: grayscale(0%);
+    user-select: none;
+}
+.imgColor:active{
+    filter: grayscale(80%);
+    transform: scale(0.9);
+}
+/*Segunda columna*/
+.col-sm-11.col-lg-7{
+    cursor: pointer;
+    max-height: 88vh;
+    overflow:auto;
+}
+.card-img-top{
+    width: 100%;
+    height:25vh;
+    user-select: none;
+}
+.img{
+    user-select: none;
+    width: 100%;
+    max-height: 40%;
+}
+
+.contadores:active{
+    transform:scale(0.9);
+}
+.brd{
+ border-width: 1.5px;
+ border-color:rgb(182, 183, 185) ;
+ border-style: solid;   
+ padding: 9px 0px;
+}
+.btn{
+    width: 100%;
+}
+
+/*Media queries para las imagenes de clasificación*/
+@media (max-width:550px) {
+/*Imagen de la primera columna*/
+.imgColor{
+    width:97%;
+    height:95%;
+}
+.querydiv{
+    display:flex !important;
+    flex-direction:row !important;
+    margin-bottom:1rem;
+  }  
+}
+

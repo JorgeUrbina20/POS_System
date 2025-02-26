@@ -1,0 +1,522 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <link rel="stylesheet" href="../Style/main.css">
+    <link rel="shortcut icon" href="../Images/Icono_del_POS.png" type="image/x-icon">
+    <title>Sistema POS</title>
+</head>
+<body>
+    <nav class="bg-dark">
+        <a href="../Pages/login.html" class="d-flex flex-row ancla">
+            <h3>NicaPOS</h3>
+            <i class="bi bi-file-post-fill"></i>
+        </a>
+    </nav>
+    <section class="container-fluid d-flex flex-row">
+        <div class="row">
+            <div class="col-md-3 col-sm-12 seccionesInfoUser"><!--Primera seccion de informacion de usuario-->
+                <div class="row">
+                    <div class="col-sm-12"><!--Seccion de info User-->
+                        <!--Meter la info segun el JSON que se realizará-->
+                        <div class="row">
+                            <div class="estiloIcon col-12 d-flex flex-column justify-content-start align-items-center">
+                                <i class="bi bi-person-circle" style="font-size: 5.1rem;"></i>
+                                <h4><strong>Usuario:</strong> Akhira</h4>
+                            </div>
+                            <div class="col-12 estiloUser">
+                                <div class="row d-flex flex-row justify-content-center align-items-center">
+                                    <div class="rounded-4 col-2 estiloIcon d-flex flex-column justify-content-center align-items-center">
+                                        <div class="posicionIconos py-3 col-6 d-flex flex-column align-items-center justify-content-center">
+                                            <i class="animarIconos fs-2 bi bi-key"></i>
+                                        </div>
+                                        <div class="posicionIconos pb-4 col-6 d-flex flex-column align-items-center justify-content-center">
+                                            <i class="animarIconos fs-2 bi bi-person-rolodex"></i>
+                                            <!--Traer el nombre desde el backend (JSON) para que cuando cambie de rol se cambie el usuario que tiene permitido interactuar con el sistema-->
+                                        </div>
+                                        <div class="posicionIconos pb-4 col-6 d-flex flex-column align-items-center justify-content-center">
+                                            <i class="animarIconos fs-2 bi bi-telephone"></i>
+                                        </div>
+                                        <div class="posicionIconos pb-4 col-6 d-flex flex-column align-items-center justify-content-center">
+                                            <i class="animarIconos fs-2 bi bi-envelope-at"></i>
+                                        </div>
+                                        <div class="posicionIconos pb-4 col-6 d-flex flex-column align-items-center justify-content-center">
+                                            <i class="animarIconos fs-2 bi bi-geo-alt"></i>
+                                        </div> 
+                                    </div>                            
+                                    <!------------------------------------------------------------------------------------>
+                                    <div class="col-10">
+                                        <div class="posicionTexto pt-3 col-8 d-flex flex-column justify-content-between">
+                                            <strong>Identificación:</strong><h5> 1578</h5><!--Colocar el id asignado en el documento js-->
+                                        </div>
+                                        <div class="posicionTexto py-2 col-8 d-flex flex-column justify-content-between">
+                                            <strong>Rol:</strong><h5> Administrador</h5>
+                                            <!--Traer el nombre desde el backend (JSON) para que cuando cambie de rol se cambie el usuario que tiene permitido interactuar con el sistema-->
+                                        </div>
+                                        <div class="posicionTexto py-2 col-8 d-flex flex-column justify-content-between">
+                                            <strong>Teléfono:</strong><h5> 8200-2241</h5>
+                                        </div>
+                                        <div class="posicionTexto py-2 col-8 d-flex flex-column justify-content-between">
+                                            <strong>Correo electrónico:</strong><h5> onichan712@example.com</h5>
+                                        </div>
+                                        <div class="posicionTexto py-2 col-md-11 col-12 d-flex flex-column justify-content-between">
+                                            <strong>Dirección:</strong><h5> De donde fue la calle de los muertos por ahi vivo</h5>
+                                        </div>
+                                    </div>                            
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-12 bg-dark"><!--Seccion iconos de lo que puede hacer el usuario-->
+                        <div class="row fw-bolder">
+                            <div class="col-2 iconosHover text-center rounded">
+                                <a href="../Pages/order.html"><abbr title="Realizar venta" class="iconosPointer"><i class="bi bi-cart fs-4"></i></abbr></a>
+                            </div>
+                            <div class="col-2 iconosHover text-center rounded">
+                                <a href="../Pages/Reporte.html"><abbr title="Reporte" class="iconosPointer"><i class="bi bi-receipt-cutoff fs-4"></i></abbr></a>
+                            </div>
+                            <div class="col-2 iconosHover text-center rounded">
+                                <a href="../Pages/Inventario.html"><abbr title="Inventario" class="iconosPointer"><i class="bi bi-card-list fs-4"></i></abbr></a>
+                            </div>
+                            <div class="col-2 text-center rounded">
+                                <div class="dropdown">
+                                    <button class="btn btn-dark dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                        <abbr title="Proveedor" class="iconosPointer"><i class="bi bi-person-vcard-fill fs-4"></i></abbr>
+                                    </button>
+                                    <ul class="dropdown-menu">
+                                        <li><a class="dropdown-item" href="#" id="crearP">Crear</a></li>
+                                        <li><a class="dropdown-item" href="#" id="editarP">Editar</a></li>
+                                        <li><a class="dropdown-item" href="#" id="bajaP">Eliminar</a></li>
+                                        <li><a class="dropdown-item" href="#" id="pAI">Todos</a></li><!--Todos: muestra a todos los usuarios que estan activos e inactivos dentro de la BDD-->
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="col-2 text-center rounded">
+                                <div class="dropdown">
+                                    <button class="btn btn-dark dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                        <abbr title="Usuario" class="iconosPointer"><i class="bi bi-person fs-4"></i></abbr>
+                                    </button>
+                                    <ul class="dropdown-menu">
+                                        <li><a class="dropdown-item" href="#" id="crearU">Crear</a></li>
+                                        <li><a class="dropdown-item" href="#" id="editarU">Editar</a></li>
+                                        <li><a class="dropdown-item" href="#" id="bajaU">Eliminar</a></li>
+                                        <li><a class="dropdown-item" href="#" id="uAI">Todos</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!--Segunda seccion modulos sobre puestos para que ejecuten la tarea que el usuario desea realizar-->
+            <div class="col-md-9 col-sm-12 bg-dark seccionesInfoUser">
+                <!--Fila para los proveedores (Nota: cambiar todos los identificadores unicos para el proveedor)-->
+                <div class="row">
+                    <div class="col-12" id="p1"><!--Módulo para crear-->
+                        <div class="row mb-2">
+                            <div class="col-12 d-flex flex-row justify-content-center align-items-center p-2">
+                                <img src="../Images/IconoPOS.webp" alt="Logo del sistema POS" style="height: 31vh; width: 20vw;">
+                            </div>
+                            <div class="col-12">
+                                <h2 class="text-center p-2 textoPrincipalCapas">Nuevo proveedor</h2>
+                                <form id="formulario3" method="post" action="#" enctype="multipart/form-data" target="self" class="row">
+                                    <div class="col-6">
+                                        <div class="form-floating mb-3">
+                                            <input maxlength="30" type="text" class="form-control" id="floatingNameCreate" placeholder="Nombre Usuario">
+                                            <label for="floatingNameCreate">Name</label>
+                                        </div>
+                                        <div class="form-floating mt-3">
+                                            <input maxlength="70" type="text" class="form-control" id="floatingRucCreate" placeholder="Ruc">
+                                            <label for="floatingRucCreate">Ruc</label>
+                                        </div>
+                                        <div class="form-floating mt-3">
+                                            <input min="99999999" max="999999999999999" type="number" class="form-control" id="floatingTelCreate" placeholder="N Tel">
+                                            <label for="floatingTelCreate">Telephone</label>
+                                        </div>
+                                        <div class="form-floating mt-3">
+                                            <select class="form-select" id="floatingCategoryCreate" aria-label="Default select example">
+                                                <option selected>Productos o servicios ofrecidos</option>
+                                                <option value="Venta">Venta</option>
+                                                <option value="Administrador">Administrador</option>
+                                                <option value="Gerente de tienda">Gerente de tienda</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                    <div class="col-6">
+                                        <div class="form-floating">
+                                            <input type="text" class="form-control" id="floatingDirCreate" placeholder="Dirección">
+                                            <label for="floatingDirCreate">Address</label>
+                                        </div>
+                                        <div class="form-floating mt-3">
+                                            <input min="0" max="9999" type="number" class="form-control" id="floatingIdCreate" placeholder="Identificación">
+                                            <label for="floatingIdCreate">Id</label>
+                                        </div>
+                                        <div class="form-floating mt-3">
+                                            <input maxlength="70" type="text" class="form-control" id="floatingEmailCreate" placeholder="Email">
+                                            <label for="floatingEmailCreate">Email</label>
+                                        </div>
+                                        <div class="d-grid gap-2 mt-3" style="height: 7.2vh;">
+                                            <button class="btn btn-primary fs-3" type="button" id="createBtn">Crear</button>
+                                        </div>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                    </div>                    
+                    <div class="col-12" id="p2"><!--Módulo para editar-->
+                        <div class="row mb-2">
+                            <div class="col-12 d-flex flex-row justify-content-center align-items-center p-2">
+                                <img src="../Images/IconoPOS.webp" alt="Logo del sistema POS" style="height: 30vh; width: 20vw;">
+                            </div>
+                            <div class="col-12">
+                                <h2 class="text-center p-2 textoPrincipalCapas">Editar Proveedor</h2>
+                                <form id="formulario2" method="post" action="#" enctype="multipart/form-data" target="self" class="row">
+                                    <div class="col-6">
+                                        <div class="form-floating mb-3">
+                                            <input min="0" max="9999" type="number" class="form-control" id="floatingIdenEdit" placeholder="Identificación">
+                                            <label for="floatingIdenEdit">Buscar id proveedor</label>
+                                        </div>
+                                        <div class="form-floating mt-3">
+                                            <input maxlength="30" type="text" class="form-control" id="floatingNameEdit" placeholder="user name" disabled>
+                                            <label for="floatingNameEdit">Name</label>
+                                        </div>
+                                        <div class="form-floating mt-3">
+                                            <input maxlength="70" type="text" class="form-control" id="floatingCorreoEdit" placeholder="Email" disabled>
+                                            <label for="floatingCorreoEdit">Email</label>
+                                        </div>
+                                        <div class="form-floating mt-3">
+                                            <input maxlength="20" type="text" class="form-control" id="floatingContraEdit" placeholder="Password" disabled>
+                                            <label for="floatingContraEdit">Ruc</label>
+                                        </div>
+                                        <div class="form-floating mt-3">
+                                            <select class="form-select" id="floatingCategoryEdit" aria-label="Default select example" disabled>
+                                                <option selected>Productos o servicios ofrecidos</option>
+                                                <option value="Venta">Venta</option>
+                                                <option value="Administrador">Administrador</option>
+                                                <option value="Gerente de tienda">Gerente de tienda</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                    <div class="col-6">
+                                        <div class="d-grid gap-2 mb-3" style="height: 8.5vh;">
+                                            <button class="btn btn-outline-success btn-lg" type="button" id="searchBtn">Buscar</button>
+                                        </div>
+                                        <div class="form-floating mt-3">
+                                            <input min="99999999" max="999999999999999" type="number" class="form-control" id="floatingCeluEdit" placeholder="N Tel" disabled>
+                                            <label for="floatingCeluEdit">Telephone</label>
+                                        </div>
+                                        <div class="form-floating mt-3">
+                                            <input type="text" class="form-control" id="floatingDirEdit" placeholder="Dirección" disabled>
+                                            <label for="floatingDirEdit">Address</label>
+                                        </div>
+                                        <div class="form-floating mt-3">
+                                            <input min="0" max="1" type="number" class="form-control" id="floatingEstEdit" placeholder="Identificación" disabled>
+                                            <label for="floatingEstEdit">State</label>
+                                        </div>
+                                        <div class="d-grid gap-2 mt-3" style="height: 8.5vh;">
+                                            <button class="btn btn-primary btn-lg" type="button" id="editBtn">Editar</button>
+                                        </div>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12" id="p3"><!--Módulo para eliminar-->
+                        <div class="row mb-2">
+                            <div class="col-12 d-flex flex-row justify-content-center align-items-center p-2">
+                                <img src="../Images/IconoPOS.webp" alt="Logo del sistema POS" style="height: 36vh; width: 25vw;">
+                            </div>
+                            <div class="col-12">
+                                <h2 class="text-center p-2 textoPrincipalCapas">Dar de baja a un proveedor</h2>
+                                <form method="post" action="#" enctype="multipart/form-data" target="self" class="row"><!--Este formulario es la fila que contiene a los elementos inputs en donde se recibe la informacion por parte del usuario-->
+                                    <div class="col-10">
+                                        <table class="table table-dark">
+                                            <thead>
+                                              <tr><!--Cambiar esta informacion según los datos que se traerán desde la BDD-->
+                                                <th>Id</th>
+                                                <th>Nombre</th>
+                                                <th>Contraseña</th>
+                                                <th>Rol</th>
+                                                <th>Telefono</th>
+                                                <th>Email</th>
+                                                <th>Dirección</th>
+                                                <th>Estado</th>
+                                              </tr>
+                                            </thead>
+                                            <tbody id="cuerpoTabla">
+                                              
+                                            </tbody>
+                                          </table>
+                                    </div>
+                                    <div class="col-2">
+                                        <div class="form-floating mb-3">
+                                            <input min="0" max="9999" type="number" class="form-control" id="floatingIdentificacion" placeholder="Identificación">
+                                            <label for="floatingIdentificacion">Id proveedor</label>
+                                        </div>
+                                        <div class="d-grid gap-3 mt-3" style="height: 15vh;">
+                                            <button class="btn btn-primary" type="button" id="buscarProveedor">Buscar proveedor</button>
+                                            <button class="btn btn-danger" type="button" id="bajaProveedor">Dar de baja</button>
+                                        </div>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                        <!--
+                        Lógica en este módulo:
+                            Cada uno de los módulos están siendo creados según la BDD,
+                            en este caso para eliminar un usuario que no es mas que darlo
+                            de baja, se tendra que hacer uso de dos sp, uno que busque al 
+                            usuario para confirmar si es ese y otro que lo de debaja
+                            si el usuario confirma que ese es el usuario al cual quiere 
+                            dar de baja, entonces se dará de baja al usuario.
+                        -->
+                    </div>
+                    <div class="col-12" id="p4"><!--Módulo para visualizar todos los proveedores existentes en el sistema-->
+                        <div class="row mb-2">
+                            <div class="col-12 d-flex flex-row justify-content-center align-items-center p-2">
+                                <img src="../Images/IconoPOS.webp" alt="Logo del sistema POS" style="height: 36vh; width: 25vw;">
+                            </div>
+                            <div class="col-12">
+                                <h2 class="text-center p-2 textoPrincipalCapas">Proveedores: Activos/Inactivos</h2>
+                                <form method="post" action="#" enctype="multipart/form-data" target="self" class="row"><!--Este formulario es la fila que contiene a los elementos inputs en donde se recibe la informacion por parte del usuario-->
+                                    <div class="col-10">
+                                        <table class="table table-dark">
+                                            <thead>
+                                              <tr><!--Cambiar esta informacion según los datos que se traerán desde la BDD-->
+                                                <th>Id</th>
+                                                <th>Nombre</th>
+                                                <th>Contraseña</th>
+                                                <th>Rol</th>
+                                                <th>Telefono</th>
+                                                <th>Email</th>
+                                                <th>Dirección</th>
+                                                <th>Estado</th>
+                                              </tr>
+                                            </thead>
+                                            <tbody id="structHTML">
+                                              
+                                            </tbody>
+                                          </table>
+                                    </div>
+                                    <div class="col-2">
+                                        <div class="d-grid gap-3 mt-3" style="height: 15vh;">
+                                            <button class="btn btn-outline-primary" type="button" id="listActivos">Buscar Activos</button>
+                                            <button class="btn btn-outline-danger" type="button" id="listInactivos">Buscar Inactivos</button>
+                                        </div>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                    </div><!--Fin de los módulos sobre puestos-->
+                </div>
+<!--------------------------------------------------------------------------------------------------------------------------------------->
+                <!--Fila para los usuarios-->
+                <div class="row">
+                    <div class="col-12 ui" id="ui1"><!--Módulo para crear-->
+                        <div class="row mb-2">
+                            <div class="col-12 d-flex flex-row justify-content-center align-items-center p-2">
+                                <img src="../Images/IconoPOS.webp" alt="Logo del sistema POS" style="height: 34vh; width: 23vw;">
+                            </div>
+                            <div class="col-12">
+                                <h2 class="text-center p-2 textoPrincipalCapas">Crear usuario</h2>
+                                <form id="formulario1" method="post" action="#" enctype="multipart/form-data" target="self" class="row"><!--Este formulario es la fila que contiene a los elementos inputs en donde se recibe la informacion por parte del usuario-->
+                                    <div class="col-6">
+                                        <div class="form-floating mb-3">
+                                            <input maxlength="30" type="text" class="form-control" id="floatingInput" placeholder="Nombre Usuario">
+                                            <label for="floatingInput">User name</label>
+                                        </div>
+                                        <div class="form-floating">
+                                            <input maxlength="70" type="text" class="form-control" id="floatingEmail" placeholder="Email">
+                                            <label for="floatingEmail">Email</label>
+                                        </div>
+                                        <div class="form-floating mt-3">
+                                            <input maxlength="20" type="password" class="form-control" id="floatingPassword" placeholder="Password">
+                                            <label for="floatingPassword">Password</label>
+                                        </div>
+                                        <div class="form-floating mt-3">
+                                            <select class="form-select" aria-label="Default select example">
+                                                <option selected>Rol</option>
+                                                <option value="Venta">Venta</option>
+                                                <option value="Administrador">Administrador</option>
+                                                <option value="Gerente de tienda">Gerente de tienda</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                    <div class="col-6">
+                                        <div class="form-floating mb-3">
+                                            <input min="99999999" max="999999999999999" type="number" class="form-control" id="floatingTel" placeholder="N Tel">
+                                            <label for="floatingTel">Telephone</label>
+                                        </div>
+                                        <div class="form-floating">
+                                            <input type="text" class="form-control" id="floatingDireccion" placeholder="Dirección">
+                                            <label for="floatingDireccion">Address</label>
+                                        </div>
+                                        <div class="form-floating mt-3">
+                                            <input min="0" max="9999" type="number" class="form-control" id="floatingId" placeholder="Identificación">
+                                            <label for="floatingId">Id</label>
+                                        </div>
+                                        <div class="d-grid gap-2 mt-3" style="height: 8.7vh;">
+                                            <button class="btn btn-primary fs-5" type="submit">Enviar</button>
+                                        </div>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12 ui" id="ui2" id="estrucHTML"><!--Módulo para editar-->
+                        <div class="row mb-2">
+                            <div class="col-12 d-flex flex-row justify-content-center align-items-center p-2">
+                                <img src="../Images/IconoPOS.webp" alt="Logo del sistema POS" style="height: 30vh; width: 20vw;">
+                            </div>
+                            <div class="col-12">
+                                <h2 class="text-center p-2 textoPrincipalCapas">Editar usuario</h2>
+                                <form id="formulario2" method="post" action="#" enctype="multipart/form-data" target="self" class="row"><!--Este formulario es la fila que contiene a los elementos inputs en donde se recibe la informacion por parte del usuario-->
+                                    <div class="col-6">
+                                        <div class="form-floating mb-3">
+                                            <input min="0" max="9999" type="number" class="form-control" id="floatingIden" placeholder="Identificación">
+                                            <label for="floatingIden">Buscar usuario</label>
+                                        </div>
+                                        <div class="form-floating mt-3">
+                                            <input maxlength="30" type="text" class="form-control" id="floatingName" placeholder="user name">
+                                            <label for="floatingName">User name</label>
+                                        </div>
+                                        <div class="form-floating mt-3">
+                                            <input maxlength="70" type="text" class="form-control" id="floatingCorreo" placeholder="Email">
+                                            <label for="floatingCorreo">Email</label>
+                                        </div>
+                                        <div class="form-floating mt-3">
+                                            <input maxlength="20" type="password" class="form-control" id="floatingContra" placeholder="Password">
+                                            <label for="floatingContra">Password</label>
+                                        </div>
+                                        <div class="form-floating mt-3">
+                                            <select class="form-select" aria-label="Default select example">
+                                                <option selected>Rol</option>
+                                                <option value="Venta">Venta</option>
+                                                <option value="Administrador">Administrador</option>
+                                                <option value="Gerente de tienda">Gerente de tienda</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                    <div class="col-6">
+                                        <div class="d-grid gap-2 mb-3" style="height: 7.3vh;">
+                                            <button class="btn btn-secondary btn-lg" type="button">Buscar</button>
+                                        </div>
+                                        <div class="form-floating mt-3">
+                                            <input min="99999999" max="999999999999999" type="number" class="form-control" id="floatingCelu" placeholder="N Tel">
+                                            <label for="floatingCelu">Telephone</label>
+                                        </div>
+                                        <div class="form-floating mt-3">
+                                            <input type="text" class="form-control" id="floatingDir" placeholder="Dirección">
+                                            <label for="floatingDir">Address</label>
+                                        </div>
+                                        <div class="form-floating mt-3">
+                                            <input min="0" max="1" type="number" class="form-control" id="floatingEst" placeholder="Identificación">
+                                            <label for="floatingEst">State</label>
+                                        </div>
+                                        <div class="d-grid gap-2 mt-3" style="height: 7.3vh;">
+                                            <button class="btn btn-primary btn-lg" type="button">Enviar</button>
+                                        </div>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12 ui" id="ui3"><!--Módulo para eliminar-->
+                        <div class="row mb-2">
+                            <div class="col-12 d-flex flex-row justify-content-center align-items-center p-2">
+                                <img src="../Images/IconoPOS.webp" alt="Logo del sistema POS" style="height: 36vh; width: 25vw;">
+                            </div>
+                            <div class="col-12">
+                                <h2 class="text-center p-2 textoPrincipalCapas">Dar de baja a un usuario</h2>
+                                <form method="post" action="#" enctype="multipart/form-data" target="self" class="row"><!--Este formulario es la fila que contiene a los elementos inputs en donde se recibe la informacion por parte del usuario-->
+                                    <div class="col-10">
+                                        <table class="table table-dark">
+                                            <thead>
+                                              <tr>
+                                                <th>Id</th>
+                                                <th>Nombre</th>
+                                                <th>Contraseña</th>
+                                                <th>Rol</th>
+                                                <th>Telefono</th>
+                                                <th>Email</th>
+                                                <th>Dirección</th>
+                                                <th>Estado</th>
+                                              </tr>
+                                            </thead>
+                                            <tbody id="cuerpoTabla">
+                                              
+                                            </tbody>
+                                          </table>
+                                    </div>
+                                    <div class="col-2">
+                                        <div class="form-floating mb-3">
+                                            <input min="0" max="9999" type="number" class="form-control" id="floatingIdentificacion" placeholder="Identificación">
+                                            <label for="floatingIdentificacion">Id usuario</label>
+                                        </div>
+                                        <div class="d-grid gap-3 mt-3" style="height: 15vh;">
+                                            <button class="btn btn-primary" type="button" id="buscarUsuario">Buscar usuario</button>
+                                            <button class="btn btn-danger" type="button" id="bajaUsuario">Dar de baja</button>
+                                        </div>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                        <!--
+                        Lógica en este módulo:
+                            Cada uno de los módulos están siendo creados según la BDD,
+                            en este caso para eliminar un usuario que no es mas que darlo
+                            de baja, se tendra que hacer uso de dos sp, uno que busque al 
+                            usuario para confirmar si es ese y otro que lo de debaja
+                            si el usuario confirma que ese es el usuario al cual quiere 
+                            dar de baja, entonces se dará de baja al usuario.
+                        -->
+                    </div>
+                    <div class="col-12 ui" id="ui4"><!--Módulo para visualizar todos los usuarios existentes en el sistema-->
+                        <div class="row mb-2">
+                            <div class="col-12 d-flex flex-row justify-content-center align-items-center p-2">
+                                <img src="../Images/IconoPOS.webp" alt="Logo del sistema POS" style="height: 36vh; width: 25vw;">
+                            </div>
+                            <div class="col-12">
+                                <h2 class="text-center p-2 textoPrincipalCapas">Usuarios: Activos/Inactivos</h2>
+                                <form method="post" action="#" enctype="multipart/form-data" target="self" class="row"><!--Este formulario es la fila que contiene a los elementos inputs en donde se recibe la informacion por parte del usuario-->
+                                    <div class="col-10">
+                                        <table class="table table-dark">
+                                            <thead>
+                                              <tr>
+                                                <th>Id</th>
+                                                <th>Nombre</th>
+                                                <th>Contraseña</th>
+                                                <th>Rol</th>
+                                                <th>Telefono</th>
+                                                <th>Email</th>
+                                                <th>Dirección</th>
+                                                <th>Estado</th>
+                                              </tr>
+                                            </thead>
+                                            <tbody id="Tbody">
+                                              
+                                            </tbody>
+                                          </table>
+                                    </div>
+                                    <div class="col-2">
+                                        <div class="d-grid gap-3 mt-3" style="height: 15vh;">
+                                            <button class="btn btn-outline-primary" type="button" id="listA">Buscar Activos</button>
+                                            <button class="btn btn-outline-danger" type="button" id="listI">Buscar Inactivos</button>
+                                        </div>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                    </div><!--Fin de los módulos sobre puestos-->
+                </div>
+            </div>
+        </div>
+    </section><!--Fin del módulo de presentacion de la pagina de inicio de sesion-->
+    <script src="../Programming/Proveedores.js"></script>
+    <script src="../Programming/UIAdmin.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+</body>
+</html>

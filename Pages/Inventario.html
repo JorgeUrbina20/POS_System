@@ -1,0 +1,582 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <link rel="stylesheet" href="../Style/estInven.css">
+    <link rel="shortcut icon" href="../Images/Icono_del_POS.png" type="image/x-icon">
+    <title>Inventario</title>
+</head>
+<body>
+    <nav class="nav justify-content-around" id="barra">
+        <a class="nav-link active" aria-current="page" href="../Pages/index.html"><i class="bi bi-house-door-fill"></i></a>
+        <h2>Inventario</h2>
+        <a class="nav-link" href="#"><i class="bi bi-brightness-high" id="fondo"></i></a><!--Esta es la clase para colocar en el js modo dark= bi-moon-stars-fill-->
+      </nav>
+
+      <!--Menú principal-->
+    <div class="container-fluid">
+        <div class="row flex" id="princicol">
+            <!--Inicio de la primera columna-->
+            <div class="querydiv mt-2 col-12 col-sm-1 bg-transparent d-flex gap-2 flex-column">
+                <nav class="navbar bg-body-tertiary">
+                    <img id="comida" src="../Images/IconoComida.jpeg" alt="Img Comida" width="70" height="65" class="imgColor">
+                </nav>
+                <nav class="navbar bg-body-tertiary">
+                    <img id="bebida" src="../Images/IconoBebida.jpeg" alt="Img Bebidas" width="70" height="65" class="imgColor">
+                </nav>
+                <nav class="navbar bg-body-tertiary">
+                    <img id="postres" src="../Images/Postres.jpeg" alt="Img Postres" width="70" height="65" class="imgColor">
+                </nav>
+                <nav class="navbar bg-body-tertiary">
+                    <img id="promo" src="../Images/PromocionComida.jpeg" alt="Img Promociones de comida" width="70" height="65" class="imgColor">
+                </nav>
+                <nav class="navbar bg-body-tertiary">
+                    <img id="extraC" src="../Images/ExtraComida.jpeg" alt="Img Extra comida" width="70" height="65" class="imgColor">
+                </nav>
+            </div>
+            <!--Inicio de la segunda columna-->
+            <div class="col-12 col-sm-11 col-lg-7">
+                <div class="row"><!--Sección de comidas-->
+                    <div id="plato1" class="col-6 col-md-4 col-lg-3 comida">
+                        <div class="card mt-2" style="width: 10rem;">
+                            <img src="../Images/Food/chicken.jpeg" class="card-img-top" alt="Food">
+                            <div class="card-body">
+                                <h5 id="text1" class="card-title text-center">Pollo</h5>
+                            </div>
+                        </div>
+                    </div>
+                    <div id="plato2" class="col-6 col-md-4 col-lg-3 comida">
+                        <div class="card mt-2" style="width: 10rem;">
+                            <img src="../Images/Food/F1.png" class="card-img-top" alt="Food">
+                            <div class="card-body">
+                                <h5 id="text1" class="card-title text-center">Cerdo</h5>
+                            </div>
+                        </div>
+                    </div>
+                    <div id="plato3" class="col-6 col-md-4 col-lg-3 comida">
+                        <div class="card mt-2" style="width: 10rem;">
+                            <img src="../Images/Food/F2.png" class="card-img-top" alt="Food">
+                            <div class="card-body">
+                                <h5 id="text1" class="card-title text-center">Ensalada</h5>
+                            </div>
+                        </div>
+                    </div>
+                    <div id="plato4" class="col-6 col-md-4 col-lg-3 comida">
+                    <div class="card mt-2" style="width: 10rem;">
+                        <img src="../Images/Food/F3.png" class="card-img-top" alt="Food">
+                        <div class="card-body">
+                            <h5 id="text1" class="card-title text-center">Carne</h5>
+                        </div>
+                    </div>
+                </div>
+                </div><!--Aca finaliza la fila-->
+                <div class="row">
+                    <div id="plato5" class="col-6 col-md-4 col-lg-3 comida">
+                        <div class="card mt-2" style="width: 10rem;">
+                            <img src="../Images/Food/F4.png" class="card-img-top" alt="...">
+                            <div class="card-body">
+                                <h5 id="text1" class="card-title text-center">EnsaHongo</h5>
+                            </div>
+                        </div>
+                    </div>
+                    <div id="plato6" class="col-6 col-md-4 col-lg-3 comida">
+                        <div class="card mt-2" style="width: 10rem;">
+                            <img src="../Images/Food/F5.png" class="card-img-top" alt="...">
+                            <div class="card-body">
+                                <h5 id="text1" class="card-title text-center">EnsaVegana</h5>
+                            </div>
+                        </div>
+                    </div>
+                    <div id="plato7" class="col-6 col-md-4 col-lg-3 comida">
+                        <div class="card mt-2" style="width: 10rem;">
+                            <img src="../Images/Food/F6.png" class="card-img-top" alt="...">
+                            <div class="card-body">
+                                <h5 id="text1" class="card-title text-center">Mix tostones</h5>
+                            </div>
+                        </div>
+                    </div>
+                    <div id="plato8" class="col-6 col-md-4 col-lg-3 comida">
+                    <div class="card mt-2" style="width: 10rem;">
+                        <img src="../Images/Food/F7.png" class="card-img-top" alt="...">
+                        <div class="card-body">
+                            <h5 id="text1" class="card-title text-center">Repocheta</h5>
+                        </div>
+                    </div>
+                </div>
+                </div><!--Aca finaliza la fila-->
+                <div class="row">
+                    <div class="col-6 col-md-4 col-lg-3 comida">
+                        <div class="card mt-2" style="width: 10rem;">
+                            <img src="../Images/Food/F8.png" class="card-img-top" alt="...">
+                            <div class="card-body">
+                                <h5 id="text1" class="card-title text-center">Agridulce</h5>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-6 col-md-4 col-lg-3 comida">
+                        <div class="card mt-2" style="width: 10rem;">
+                            <img src="../Images/Food/F9.png" class="card-img-top" alt="...">
+                            <div class="card-body">
+                                <h5 id="text1" class="card-title text-center">Hamburgues</h5>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-6 col-md-4 col-lg-3 comida">
+                        <div class="card mt-2" style="width: 10rem;">
+                            <img src="../Images/Food/F10.png" class="card-img-top" alt="...">
+                            <div class="card-body">
+                                <h5 id="text1" class="card-title text-center">Hot Dog</h5>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-6 col-md-4 col-lg-3 comida">
+                    <div class="card mt-2" style="width: 10rem;">
+                        <img src="../Images/Food/food.jpg" class="card-img-top" alt="...">
+                        <div class="card-body">
+                            <h5 id="text1" class="card-title text-center">Mix Papas</h5>
+                        </div>
+                    </div>
+                </div>
+                </div><!--Aca finaliza la fila-->
+                <div class="row"><!--Sección de Bebidas-->
+                    <div class="col-6 col-md-4 col-lg-3 comida">
+                        <div class="card mt-2" style="width: 10rem;">
+                            <img src="../Images/Food/Food2.jpg" class="card-img-top" alt="...">
+                            <div class="card-body">
+                                <h5 id="text1" class="card-title text-center">EnsaFideos</h5>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-6 col-md-4 col-lg-3 bebida">
+                        <div class="card mt-2" style="width: 10rem;">
+                            <img src="../Images/Drinks/Cacao_Drink.jpeg" class="card-img-top" alt="...">
+                            <div class="card-body">
+                                <h5 id="text1" class="card-title text-center">Cacao</h5>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-6 col-md-4 col-lg-3 bebida">
+                        <div class="card mt-2" style="width: 10rem;">
+                            <img src="../Images/Drinks/Chicha_Drink.jpeg" class="card-img-top" alt="...">
+                            <div class="card-body">
+                                <h5 id="text1" class="card-title text-center">Chicha</h5>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-6 col-md-4 col-lg-3 bebida">
+                    <div class="card mt-2" style="width: 10rem;">
+                        <img src="../Images/Drinks/Jamaica_Drink.jpeg" class="card-img-top" alt="...">
+                        <div class="card-body">
+                            <h5 id="text1" class="card-title text-center">Jamaica</h5>
+                        </div>
+                    </div>
+                </div>
+                </div><!--Aca finaliza la fila-->
+                <div class="row">
+                    <div class="col-6 col-md-4 col-lg-3 bebida">
+                        <div class="card mt-2" style="width: 10rem;">
+                            <img src="../Images/Drinks/Naranja_Drink.jpeg" class="card-img-top" alt="...">
+                            <div class="card-body">
+                                <h5 id="text1" class="card-title text-center">Naranja</h5>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-6 col-md-4 col-lg-3 bebida">
+                        <div class="card mt-2" style="width: 10rem;">
+                            <img src="../Images/Drinks/Pinol_Drink.jpeg" class="card-img-top" alt="...">
+                            <div class="card-body">
+                                <h5 id="text1" class="card-title text-center">Pinol</h5>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-6 col-md-4 col-lg-3 bebida">
+                        <div class="card mt-2" style="width: 10rem;">
+                            <img src="../Images/Drinks/Pitaya_Drink.jpeg" class="card-img-top" alt="...">
+                            <div class="card-body">
+                                <h5 id="text1" class="card-title text-center">Pitaya</h5>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-6 col-md-4 col-lg-3 bebida">
+                    <div class="card mt-2" style="width: 10rem;">
+                        <img src="../Images/Soda/Botella_Gaseosa.jpeg" class="card-img-top" alt="...">
+                        <div class="card-body">
+                            <h5 id="text1" class="card-title text-center">1LT Bilz</h5>
+                        </div>
+                    </div>
+                </div>
+                </div><!--Aca finaliza la fila-->
+                <div class="row">
+                    <div class="col-6 col-md-4 col-lg-3 bebida">
+                        <div class="card mt-2" style="width: 10rem;">
+                            <img src="../Images/Soda/Gaseosa_BigCola.jpeg" class="card-img-top" alt="...">
+                            <div class="card-body">
+                                <h5 id="text1" class="card-title text-center">1LT BigCola</h5>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-6 col-md-4 col-lg-3 bebida">
+                        <div class="card mt-2" style="width: 10rem;">
+                            <img src="../Images/Soda/Gaseosa_Bliz.jpeg" class="card-img-top" alt="...">
+                            <div class="card-body">
+                                <h5 id="text1" class="card-title text-center">350ML Bilz</h5>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-6 col-md-4 col-lg-3 bebida">
+                        <div class="card mt-2" style="width: 10rem;">
+                            <img src="../Images/Soda/Gaseosa_Coca.jpeg" class="card-img-top" alt="...">
+                            <div class="card-body">
+                                <h5 id="text1" class="card-title text-center">375ML CC</h5>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-6 col-md-4 col-lg-3 bebida">
+                    <div class="card mt-2" style="width: 10rem;">
+                        <img src="../Images/Soda/PrixCola_Botella.jpeg" class="card-img-top" alt="...">
+                        <div class="card-body">
+                            <h5 id="text1" class="card-title text-center">1LT PrixCola</h5>
+                        </div>
+                    </div>
+                </div>  
+                </div><!--Aca finaliza la fila-->
+                <div class="row">
+                    <div class="col-6 col-md-4 col-lg-3 bebida">
+                        <div class="card mt-2" style="width: 10rem;">
+                            <img src="../Images/Soda/PrixCola_Lata.jpeg" class="card-img-top" alt="...">
+                            <div class="card-body">
+                                <h5 id="text1" class="card-title text-center">355ML PrixC</h5>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-6 col-md-4 col-lg-3 bebida">
+                        <div class="card mt-2" style="width: 10rem;">
+                            <img src="../Images/Soda/Raptor.jpeg" class="card-img-top" alt="...">
+                            <div class="card-body">
+                                <h5 id="text1" class="card-title text-center">310ML Raptor</h5>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-6 col-md-4 col-lg-3 bebida">
+                        <div class="card mt-2" style="width: 10rem;">
+                            <img src="../Images/Soda/Raptor_Lata.jpeg" class="card-img-top" alt="...">
+                            <div class="card-body">
+                                <h5 id="text1" class="card-title text-center">310ML Raptor</h5>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-6 col-md-4 col-lg-3 bebida">
+                    <div class="card mt-2" style="width: 10rem;">
+                        <img src="../Images/Beer/AdanYEva.jpeg" class="card-img-top" alt="...">
+                        <div class="card-body">
+                            <h5 id="text1" class="card-title text-center">AdanYEva P1</h5>
+                        </div>
+                    </div>
+                </div>  
+                </div><!--Aca finaliza la fila-->
+                <div class="row">
+                    <div class="col-6 col-md-4 col-lg-3 bebida">
+                        <div class="card mt-2" style="width: 10rem;">
+                            <img src="../Images/Beer/AdanYEva2.jpeg" class="card-img-top" alt="...">
+                            <div class="card-body">
+                                <h5 id="text1" class="card-title text-center">AdanYEva P2</h5>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-6 col-md-4 col-lg-3 bebida">
+                        <div class="card mt-2" style="width: 10rem;">
+                            <img src="../Images/Beer/AdanYEva3.jpeg" class="card-img-top" alt="...">
+                            <div class="card-body">
+                                <h5 id="text1" class="card-title text-center">AdanYEva P3</h5>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-6 col-md-4 col-lg-3 bebida">
+                        <div class="card mt-2" style="width: 10rem;">
+                            <img src="../Images/Beer/AdanYEva4.jpeg" class="card-img-top" alt="...">
+                            <div class="card-body">
+                                <h5 id="text1" class="card-title text-center">AdanYEva P4</h5>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-6 col-md-4 col-lg-3 bebida">
+                    <div class="card mt-2" style="width: 10rem;">
+                        <img src="../Images/Beer/Bambu1.jpeg" class="card-img-top" alt="...">
+                        <div class="card-body">
+                            <h5 id="text1" class="card-title text-center">Bamboo P1</h5>
+                        </div>
+                    </div>
+                </div>  
+                </div><!--Aca finaliza la fila-->
+                <div class="row">
+                    <div class="col-6 col-md-4 col-lg-3 bebida">
+                        <div class="card mt-2" style="width: 10rem;">
+                            <img src="../Images/Beer/Bambu2.jpeg" class="card-img-top" alt="...">
+                            <div class="card-body">
+                                <h5 id="text1" class="card-title text-center">Bamboo P2</h5>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-6 col-md-4 col-lg-3 bebida">
+                        <div class="card mt-2" style="width: 10rem;">
+                            <img src="../Images/Beer/Bambu3.jpeg" class="card-img-top" alt="...">
+                            <div class="card-body">
+                                <h5 id="text1" class="card-title text-center">Bamboo P3</h5>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-6 col-md-4 col-lg-3 bebida">
+                        <div class="card mt-2" style="width: 10rem;">
+                            <img src="../Images/Beer/Cerveza_Botella.jpeg" class="card-img-top" alt="...">
+                            <div class="card-body">
+                                <h5 id="text1" class="card-title text-center">375ML Toña</h5>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-6 col-md-4 col-lg-3 bebida">
+                    <div class="card mt-2" style="width: 10rem;">
+                        <img src="../Images/Beer/Cerveza_Lata.jpeg" class="card-img-top" alt="...">
+                        <div class="card-body">
+                            <h5 id="text1" class="card-title text-center">Toña Lata</h5>
+                        </div>
+                    </div>
+                </div>  
+                </div><!--Aca finaliza la fila-->
+                <div class="row"><!--Sección de Postres-->
+                    <div class="col-6 col-md-4 col-lg-3 bebida">
+                        <div class="card mt-2" style="width: 10rem;">
+                            <img src="../Images/Beer/Cerveza_SixPack.jpeg" class="card-img-top" alt="...">
+                            <div class="card-body">
+                                <h5 id="text1" class="card-title text-center">Toña SixPack</h5>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-6 col-md-4 col-lg-3 bebida">
+                        <div class="card mt-2" style="width: 10rem;">
+                            <img src="../Images/Beer/Victoria_Frost.jpeg" class="card-img-top" alt="...">
+                            <div class="card-body">
+                                <h5 id="text1" class="card-title text-center">375ML Frost</h5>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-6 col-md-4 col-lg-3 postre">
+                        <div class="card mt-2" style="width: 10rem;">
+                            <img src="../Images/Postres/ArrozLeche.jpeg" class="card-img-top" alt="...">
+                            <div class="card-body">
+                                <h5 id="text1" class="card-title text-center">A. con leche</h5>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-6 col-md-4 col-lg-3 postre">
+                    <div class="card mt-2" style="width: 10rem;">
+                        <img src="../Images/Postres/BudinesPastel.jpeg" class="card-img-top" alt="...">
+                        <div class="card-body">
+                            <h5 id="text1" class="card-title text-center">BudiHelado</h5>
+                        </div>
+                    </div>
+                </div>  
+                </div><!--Aca finaliza la fila-->
+                <div class="row">
+                    <div class="col-6 col-md-4 col-lg-3 postre">
+                        <div class="card mt-2" style="width: 10rem;">
+                            <img src="../Images/Postres/Eskimo.jpeg" class="card-img-top" alt="...">
+                            <div class="card-body">
+                                <h5 id="text1" class="card-title text-center">Eskimo</h5>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-6 col-md-4 col-lg-3 postre">
+                        <div class="card mt-2" style="width: 10rem;">
+                            <img src="../Images/Postres/pastel.jpeg" class="card-img-top" alt="...">
+                            <div class="card-body">
+                                <h5 id="text1" class="card-title text-center">Pastel</h5>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-6 col-md-4 col-lg-3 postre">
+                        <div class="card mt-2" style="width: 10rem;">
+                            <img src="../Images/Postres/TresLeche.jpeg" class="card-img-top" alt="...">
+                            <div class="card-body">
+                                <h5 id="text1" class="card-title text-center">Tres Leche</h5>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-6 col-md-4 col-lg-3 promociones">
+                    <div class="card mt-2" style="width: 10rem;">
+                        <img src="../Images/Promociones/Promo_Bebida1.jpg" class="card-img-top" alt="...">
+                        <div class="card-body">
+                            <h5 id="text1" class="card-title text-center">PromoBebida</h5>
+                        </div>
+                    </div>
+                </div>  
+                </div><!--Aca finaliza la fila-->
+                <div class="row"><!--Sección de Promociones-->
+                    <div class="col-6 col-md-4 col-lg-3 promociones">
+                        <div class="card mt-2" style="width: 10rem;">
+                            <img src="../Images/Promociones/Promo_Bebidas2.jpg" class="card-img-top" alt="...">
+                            <div class="card-body">
+                                <h5 id="text1" class="card-title text-center">PromoB1</h5>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-6 col-md-4 col-lg-3 promociones">
+                        <div class="card mt-2" style="width: 10rem;">
+                            <img src="../Images/Promociones/Promo_Bebidas3.jpg" class="card-img-top" alt="...">
+                            <div class="card-body">
+                                <h5 id="text1" class="card-title text-center">PromoB2</h5>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-6 col-md-4 col-lg-3 promociones">
+                        <div class="card mt-2" style="width: 10rem;">
+                            <img src="../Images/Promociones/Promo_Bebidas4.jpg" class="card-img-top" alt="...">
+                            <div class="card-body">
+                                <h5 id="text1" class="card-title text-center">PromoB3</h5>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-6 col-md-4 col-lg-3 promociones">
+                    <div class="card mt-2" style="width: 10rem;">
+                        <img src="../Images/Promociones/Promo_Bebidas5.jpg" class="card-img-top" alt="...">
+                        <div class="card-body">
+                            <h5 id="text1" class="card-title text-center">PromoB4</h5>
+                        </div>
+                    </div>
+                </div>  
+                </div><!--Aca finaliza la fila-->
+                <div class="row">
+                    <div class="col-6 col-md-4 col-lg-3 promociones">
+                        <div class="card mt-2" style="width: 10rem;">
+                            <img src="../Images/Promociones/Promo_Comida1.jpg" class="card-img-top" alt="...">
+                            <div class="card-body">
+                                <h5 id="text1" class="card-title text-center">PromoC1</h5>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-6 col-md-4 col-lg-3 promociones">
+                        <div class="card mt-2" style="width: 10rem;">
+                            <img src="../Images/Promociones/Promo_Comida2.jpg" class="card-img-top" alt="...">
+                            <div class="card-body">
+                                <h5 id="text1" class="card-title text-center">PromoC2</h5>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-6 col-md-4 col-lg-3 promociones">
+                        <div class="card mt-2" style="width: 10rem;">
+                            <img src="../Images/Promociones/Promo_Comida3.jpg" class="card-img-top" alt="...">
+                            <div class="card-body">
+                                <h5 id="text1" class="card-title text-center">PromoC3</h5>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-6 col-md-4 col-lg-3 promociones">
+                    <div class="card mt-2" style="width: 10rem;">
+                        <img src="../Images/Promociones/Promo_Comida4.jpg" class="card-img-top" alt="...">
+                        <div class="card-body">
+                            <h5 id="text1" class="card-title text-center">PromoC4</h5>
+                        </div>
+                    </div>
+                </div>  
+                </div><!--Aca finaliza la fila-->
+                <div class="row"><!--Sección de Extras-->
+                    <div class="col-6 col-md-4 col-lg-3 promociones">
+                        <div class="card mt-2" style="width: 10rem;">
+                            <img src="../Images/Promociones/Promo_Comida5.jpg" class="card-img-top" alt="...">
+                            <div class="card-body">
+                                <h5 id="text1" class="card-title text-center">PromoC5</h5>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-6 col-md-4 col-lg-3 extras">
+                        <div class="card mt-2" style="width: 10rem;">
+                            <img src="../Images/Extra/Arroz.jpeg" class="card-img-top" alt="...">
+                            <div class="card-body">
+                                <h5 id="text1" class="card-title text-center">Arroz</h5>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-6 col-md-4 col-lg-3 extras">
+                        <div class="card mt-2" style="width: 10rem;">
+                            <img src="../Images/Extra/Ensalada.jpeg" class="card-img-top" alt="...">
+                            <div class="card-body">
+                                <h5 id="text1" class="card-title text-center">Ensalada</h5>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-6 col-md-4 col-lg-3 extras">
+                    <div class="card mt-2" style="width: 10rem;">
+                        <img src="../Images/Extra/MaduroFrito.jpeg" class="card-img-top" alt="...">
+                        <div class="card-body">
+                            <h5 id="text1" class="card-title text-center">Maduro Frito</h5>
+                        </div>
+                    </div>
+                </div>  
+                </div><!--Aca finaliza la fila-->
+                <div class="row">
+                    <div class="col-6 col-md-4 col-lg-3 extras">
+                        <div class="card mt-2" style="width: 10rem;">
+                            <img src="../Images/Extra/QuesoFrito.jpeg" class="card-img-top" alt="...">
+                            <div class="card-body">
+                                <h5 id="text1" class="card-title text-center">Queso Frito</h5>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-6 col-md-4 col-lg-3 extras">
+                        <div class="card mt-2" style="width: 10rem;">
+                            <img src="../Images/Extra/TajadasFritas.jpeg" class="card-img-top" alt="...">
+                            <div class="card-body">
+                                <h5 id="text1" class="card-title text-center">Tajadas Fritas</h5>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-6 col-md-4 col-lg-3 bebida">
+                        <div class="card mt-2" style="width: 10rem;">
+                            <img src="../Images/Drinks/Coffee.jfif" class="card-img-top" alt="...">
+                            <div class="card-body">
+                                <h5 id="text1" class="card-title text-center">Café</h5>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-6 col-md-4 col-lg-3 comida">
+                    <div class="card mt-2" style="width: 10rem;">
+                        <img src="../Images/Food/NiuRou.jfif" class="card-img-top" alt="...">
+                        <div class="card-body">
+                            <h5 id="text1" class="card-title text-center">NiuRouMian</h5>
+                        </div>
+                    </div>
+                </div>  
+                </div><!--Aca finaliza la fila-->
+            </div>
+        <!--Acá empieza la tercera columna-->
+            <div class="col-sm-12 col-lg-4">
+                <h5 class="text-center color">Nombre del Item</h5>
+                <img src="../Images/Bebidas/Imagen3.png" class="img" alt="Arroz chino">
+                <div class="row text-center mt-2 tabla">
+                    <div class="col-6 brd fw-bolder fs-5">Cantidad</div>
+                    <div class="col-6 brd fw-bolder fs-5">Precio</div>
+                    <div id="cantidad" class="col-6 brd fs-5">0</div>
+                    <div id="precio" class="col-6 brd fs-5">$0</div>
+                </div>
+                    <div class="dropdown mt-5">
+                        <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            Editar
+                        </button>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="#">Nombre</a></li>
+                            <li><a class="dropdown-item" href="#">Precio</a></li>
+                            <li><a class="dropdown-item" href="#">Cantidad</a></li>
+                            <li><a class="dropdown-item" href="#">Foto</a></li>
+                            <li><a class="dropdown-item" href="#">Agregar nuevo plato</a></li>
+                        </ul>
+                    </div>
+            </div>
+    </div>
+</div>
+    <script src="../Programming/productos.js"></script>
+    <script src="../Programming/App.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+</body>
+</html>

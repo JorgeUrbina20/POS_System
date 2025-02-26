@@ -1,0 +1,75 @@
+*{
+    padding: 0%;
+    margin: 0%;
+    box-sizing: border-box;
+}
+nav{
+    background-color:rgb(18,136,171);
+    opacity: 0.8;
+    color:white;
+    display: flex;
+    flex-flow: row wrap;
+    height: 8vh;
+    justify-content:center;
+    align-items: center;
+    align-content: space-around;
+}
+nav>.ancla{
+    text-decoration:none;
+}
+nav>.ancla>h3{
+    color:white;
+    font-size: 2rem;
+}
+i{
+    color: white;
+    font-size: 2rem;
+}
+
+section{
+    height: 92vh;
+    background: darkblue;
+    /*overflow:hidden;*/
+}
+/*Secciones de igual tamaño*/
+.seccionesInfoUser{
+    height: 92vh;
+    overflow: auto;
+}
+
+/*Sección de los iconos de la primera columna*/
+.animarIconos{
+    transition-property: color;
+    transition-duration: 0.7s;
+    cursor: pointer;
+}
+.animarIconos:hover{/*Revisar ya que no funciona este efecto ver porque*/
+    color:rgb(8, 90, 16) !important;
+}
+.posicionIconos{
+    position:relative;
+    bottom: 1.2rem;
+}
+.posicionTexto{
+    position:relative;
+    bottom: 0.4rem;
+}
+/*Aca finaliza la seccion de los iconos*/
+/*Estilo de la info de usuario*/
+.estiloUser{
+    background-color: rgb(32, 32, 32);
+    color: aliceblue;
+}
+
+.estiloIcon{
+    background-color:darkblue; 
+    color:aliceblue;
+}
+/*-----------------------------------------*/
+/*Seccion de iconos donde el usuario realiza la tarea que el quiera*/
+.iconosPointer{
+    cursor: pointer !important; 
+}
+.iconosHover:hover{
+    background-color: rgb(70, 69, 69);
+}
